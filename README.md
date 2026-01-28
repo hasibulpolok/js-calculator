@@ -62,14 +62,3 @@ Extending ideas
 - Scientific mode with trig/log functions
 - More robust expression parser for better error messages and safety
 
-License
-- MIT License — feel free to reuse and modify.
-
-Contact / Next steps
-I've written this README describing how the project is structured and how to run and extend it. If you want, I can:
-- Provide a single-file (HTML-only) distribution,
-- Add a small test suite,
-- Implement history, or
-- Add additional scientific functions and examples.
-
-```
