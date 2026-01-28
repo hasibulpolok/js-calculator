@@ -1,0 +1,74 @@
+:root{
+  --bg: #f3f4f6;
+  --panel: #222831;
+  --accent: #00adb5;
+  --btn: #393e46;
+  --btn-text: #ffffff;
+  --display-bg: #eceff1;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg,#e6eef2, #f3f4f6);
+  font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  padding:20px;
+}
+
+.calculator{
+  width:320px;
+  max-width:95vw;
+  background:var(--panel);
+  border-radius:12px;
+  padding:16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  color:var(--btn-text);
+}
+
+.display{
+  width:100%;
+  height:56px;
+  border-radius:8px;
+  border:none;
+  margin-bottom:12px;
+  padding:10px 14px;
+  font-size:1.4rem;
+  text-align:right;
+  background:var(--display-bg);
+  color:#111827;
+  box-shadow: inset 0 -2px 6px rgba(0,0,0,0.05);
+}
+
+.buttons{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:10px;
+}
+
+.btn{
+  background:var(--btn);
+  color:var(--btn-text);
+  border:none;
+  border-radius:8px;
+  padding:14px;
+  font-size:1.1rem;
+  cursor:pointer;
+  transition:transform 0.06s ease, box-shadow 0.06s ease;
+  user-select:none;
+}
+
+.btn:active{ transform:translateY(1px); }
+
+.btn.operator{ background: #f9a826; color:#111827; }
+.btn.function{ background:#6c757d; }
+.btn.equals{ background: var(--accent); color:#fff; grid-column: span 1; }
+.btn.zero{ grid-column: span 2; }
+
+@media (max-width:360px){
+  .display{ height:48px; font-size:1.2rem; }
+  .btn{ padding:10px; font-size:1rem; }
+}
